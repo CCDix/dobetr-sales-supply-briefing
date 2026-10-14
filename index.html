@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PACE - Sales Partnership Briefing</title>
+ <style>
+ :root {
+ --bg-color: #0f172a;
+ --card-bg: #1e293b;
+ --card-border: #334155;
+ --text-main: #f8fafc;
+ --text-muted: #94a3b8;
+ --accent-color: #38bdf8;
+ --accent-glow: rgba(56, 189, 248, 0.15);
+ --badge-bg: rgba(56, 189, 248, 0.1);
+ --badge-text: #38bdf8;
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ background-color: var(--bg-color);
+ color: var(--text-main);
+ line-height: 1.6;
+ padding: 40px 20px;
+ }
+
+ .container {
+ max-width: 850px;
+ margin: 0 auto;
+ }
+
+ header {
+ margin-bottom: 40px;
+ border-bottom: 1px solid var(--card-border);
+ padding-bottom: 24px;
+ }
+
+ .tag {
+ display: inline-block;
+ background-color: var(--badge-bg);
+ color: var(--badge-text);
+ padding: 4px 12px;
+ border-radius: 20px;
+ font-size: 0.85rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ margin-bottom: 12px;
+ border: 1px solid rgba(56, 189, 248, 0.2);
+ }
+
+ h1 {
+ font-size: 2.2rem;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ margin-bottom: 12px;
+ color: var(--text-main);
+ }
+
+ .subtitle {
+ color: var(--text-muted);
+ font-size: 1.05rem;
+ }
+
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+ gap: 20px;
+ margin-bottom: 20px;
+ }
+
+ .card {
+ background-color: var(--card-bg);
+ border: 1px solid var(--card-border);
+ border-radius: 12px;
+ padding: 24px;
+ transition: border-color 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .card:hover {
+ border-color: var(--accent-color);
+ box-shadow: 0 0 20px var(--accent-glow);
+ }
+
+ .card-full {
+ grid-column: 1 / -1;
+ }
+
+ .card h2 {
+ font-size: 1.25rem;
+ font-weight: 600;
+ margin-bottom: 16px;
+ color: var(--accent-color);
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ ul {
+ list-style: none;
+ }
+
+ li {
+ position: relative;
+ padding-left: 20px;
+ margin-bottom: 10px;
+ color: var(--text-muted);
+ font-size: 0.95rem;
+ }
+
+ li strong {
+ color: var(--text-main);
+ }
+
+ li::before {
+ content: "•";
+ position: absolute;
+ left: 0;
+ color: var(--accent-color);
+ font-weight: bold;
+ }
+
+ .metric-container {
+ display: flex;
+ gap: 16px;
+ margin-top: 12px;
+ flex-wrap: wrap;
+ }
+
+ .metric-box {
+ background-color: rgba(15, 23, 42, 0.6);
+ border: 1px solid var(--card-border);
+ padding: 12px 16px;
+ border-radius: 8px;
+ flex: 1;
+ min-width: 140px;
+ }
+
+ .metric-label {
+ font-size: 0.75rem;
+ color: var(--text-muted);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+
+ .metric-value {
+ font-size: 1.1rem;
+ font-weight: 700;
+ color: var(--text-main);
+ margin-top: 2px;
+ }
+
+ ol {
+ counter-reset: item;
+ list-style: none;
+ }
+
+ ol li {
+ counter-increment: item;
+ padding-left: 32px;
+ margin-bottom: 14px;
+ }
+
+ ol li::before {
+ content: counter(item);
+ position: absolute;
+ left: 0;
+ top: 2px;
+ background-color: var(--badge-bg);
+ color: var(--accent-color);
+ font-weight: 700;
+ font-size: 0.8rem;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid rgba(56, 189, 248, 0.3);
+ }
+
+ .notice-card {
+ background-color: rgba(56, 189, 248, 0.05);
+ border: 1px solid rgba(56, 189, 248, 0.2);
+ border-radius: 12px;
+ padding: 20px;
+ margin-top: 20px;
+ font-size: 0.9rem;
+ color: var(--text-muted);
+ }
+
+ .notice-card strong {
+ color: var(--accent-color);
+ }
+
+ a {
+ color: var(--accent-color);
+ text-decoration: none;
+ }
+
+ a:hover {
+ text-decoration: underline;
+ }
+
+ @media (max-width: 600px) {
+ .grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+</head>
+<body>
+
+<div class="container">
+
+ <header>
+ <span class="tag">Request for Proposal (RFP)</span>
+ <h1>PACE Sales Partnership Briefing</h1>
+ <p class="subtitle">Framework & requirements for cold acquisition and sales partners (dobetr.de)</p>
+ </header>
+
+ <div class="grid">
+
+ <!-- SECTION 1 -->
+ <div class="card">
+ <h2>Product & Market Overview</h2>
+ <ul>
+ <li><strong>Product:</strong> <a href="https://www.dobetr.de" target="_blank">PACE Test</a> – A scientifically validated and reliable online assessment for athletes' mental skills.</li>
+ <li><strong>Target Audience:</strong> Exclusively sports clubs, coaches, sports federations/associations, and sports psychologists. <em>(No corporate HR/B2B)</em>.</li>
+ <li><strong>Language:</strong> English only.</li>
+ <li><strong>Pricing Model:</strong> €1,200 annual license per team, coach, or sports psychologist.</li>
+ </ul>
+ </div>
+
+ <!-- SECTION 2 -->
+ <div class="card">
+ <h2>Status Quo & Assets</h2>
+ <ul>
+ <li><strong>The Challenge:</strong> Lack of internal manpower and an established, scalable cold outreach process.</li>
+ <li><strong>Available Assets:</strong>
+ <div class="metric-container">
+ <div class="metric-box">
+ <div class="metric-label">Website</div>
+ <div class="metric-value">dobetr.de</div>
+ </div>
+ <div class="metric-box">
+ <div class="metric-label">Socials</div>
+ <div class="metric-value">Insta & LinkedIn</div>
+ </div>
+ <div class="metric-box">
+ <div class="metric-label">Outreach</div>
+ <div class="metric-value">CRM Setup</div>
+ </div>
+ </div>
+ </li>
+ </ul>
+ </div>
+
+ <!-- SECTION 3 -->
+ <div class="card card-full">
+ <h2>Scope of Work</h2>
+ <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+ We are <strong>not seeking high-ticket sales coaching</strong>. We require hands-on execution or a ready-to-use setup:
+ </p>
+ <ul>
+ <li><strong>Model A: Done-For-You (SDR / Outreach Agency):</strong> Full execution of cold outreach (Email campaigns, Instagram DMs) to generate qualified demo calls or direct license sales.</li>
+ <li><strong>Model B: Done-With-You (Project-Based Setup):</strong> Creation of ready-to-use outreach scripts, sales funnels, and proven sequences tailored specifically to the international sports sector.</li>
+ </ul>
+ </div>
+
+ <!-- SECTION 4 -->
+ <div class="card card-full">
+ <h2>Proposal Requirements (Your Pitch)</h2>
+ <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+ Please submit a concise proposal covering the following four areas:
+ </p>
+ <ol>
+ <li><strong>Strategic Approach:</strong> Recommended acquisition channels for reaching English-speaking sports coaches, federations, and psychologists.</li>
+ <li><strong>Target KPIs:</strong> Projected numbers of qualified contacts, demo calls, or sales on a weekly/monthly basis.</li>
+ <li><strong>Compensation Structure:</strong> Monthly retainer / base fee (if applicable) + Performance commission (e.g. per demo or closed license).</li>
+ <li><strong>Timeline & Onboarding:</strong> Estimated timeframe from agreement to launching the first campaign.</li>
+ </ol>
+ </div>
+
+ </div>
+
+ <div class="notice-card">
+ <strong>Important Commercial Note:</strong> With an annual license value of €1,200, maintaining a healthy, sustainable Customer Acquisition Cost (CAC) to revenue ratio and a fair risk-sharing model is critical to us.
+ </div>
+
+</div>
+
+</body>
+</html>
